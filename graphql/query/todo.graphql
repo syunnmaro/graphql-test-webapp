@@ -5,12 +5,11 @@ query getTodo {
   }
 }
 
-mutation createTodo {
-  createTodo(input: { text: "todo", userId: "1" }) {
-    user {
-      id
+mutation CreateTodo {
+    createTodo(input: {text: "Create GraphQL Example", done: false, userID: 1}) {
+        id
+        text
+        done
+        userID
     }
-    text
-    done
-  }
 }
